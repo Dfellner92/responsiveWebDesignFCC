@@ -2,8 +2,9 @@
 
 To pass the test on this challenge, change your ```h1``` element's text to say ```Hello World```.
 
+```html
 <h1>Hello World</h1>
-
+```
 ### Headline with the h2 Element
 
 Add an ```h2``` tag that says "CatPhotoApp" to create a second HTML element below your "Hello World" ```h1``` element.
