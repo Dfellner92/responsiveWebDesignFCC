@@ -377,56 +377,141 @@ Nest the existing `input` element inside a `form` element and assign `"https://w
 
 ### Add a Submit Button to a Form
 
-Add a button as the last element of your ```form``` element with a type of ```submit```, and ```Submit``` as its text.
+Add a button as the last element of your `form` element with a type of `submit`, and `Submit` as its text.
 
 ```html
 <form action="https://www.freecatphotoapp.com/submit-cat-photo">
-    <input type="text" placeholder="cat photo URL">
-    <button type="submit">Submit</button>
+  <input type="text" placeholder="cat photo URL" />
+  <button type="submit">Submit</button>
 </form>
 ```
 
 ### Use HTML5 to Require a Field
 
-Make your text ```input``` a ```required``` field, so that your user can't submit the form without completing this field.
+Make your text `input` a `required` field, so that your user can't submit the form without completing this field.
 
 Then try to submit the form without inputting any text. See how your HTML5 form notifies you that the field is required?
 
 ```html
-<input type="text" required placeholder="cat photo URL">
+<input type="text" required placeholder="cat photo URL" />
 ```
 
 ### Create a Set of Radio Buttons
 
-Add a pair of radio buttons to your form, each nested in its own ```label``` element. One should have the option of ```indoor``` and the other should have the option of ```outdoor```. Both should share the name attribute of ```indoor-outdoor``` to create a radio group.
+Add a pair of radio buttons to your form, each nested in its own `label` element. One should have the option of `indoor` and the other should have the option of `outdoor`. Both should share the name attribute of `indoor-outdoor` to create a radio group.
 
 ```html
 <label for="indoor">
-    Indoor
-    <input id="indoor" type="radio" name="indoor-outdoor">
+  Indoor
+  <input id="indoor" type="radio" name="indoor-outdoor" />
 </label>
 <label for="outdoor">
-      Outdoor
-    <input id="outdoor" type="radio" name="indoor-outdoor">
+  Outdoor
+  <input id="outdoor" type="radio" name="indoor-outdoor" />
 </label>
 ```
 
 ### Create a Set of Checkboxes
 
-
-Add to your form a set of three checkboxes. Each checkbox should be nested within its own ```label``` element. All three should share the ```name``` attribute of ```personality```.
+Add to your form a set of three checkboxes. Each checkbox should be nested within its own `label` element. All three should share the `name` attribute of `personality`.
 
 ```html
-<label for="loving"><input id="loving" type="checkbox" name="personality"> Loving
+<label for="loving"
+  ><input id="loving" type="checkbox" name="personality" /> Loving
 </label>
-<label for="kind"><input id="kind" type="checkbox" name="personality"> Kind</label>
-<label for="angry"><input id="angry" type="checkbox" name="personality"> Angry</label>
+<label for="kind"
+  ><input id="kind" type="checkbox" name="personality" /> Kind</label
+>
+<label for="angry"
+  ><input id="angry" type="checkbox" name="personality" /> Angry</label
+>
 ```
 
 ### Use the value attribute with Radio Buttons and Checkboxes
 
-Give each of the existing ```radio``` and ```checkbox``` inputs the ```value``` attribute. Do not create any new radio or checkbox elements. Use the input label text, in lowercase, as the value for the attribute.
+Give each of the existing `radio` and `checkbox` inputs the `value` attribute. Do not create any new radio or checkbox elements. Use the input label text, in lowercase, as the value for the attribute.
 
 ```html
+<label for="indoor"
+  ><input id="indoor" value="indoor" type="radio" name="indoor-outdoor" />
+  Indoor</label
+>
+<label for="outdoor"
+  ><input id="outdoor" value="outdoor" type="radio" name="indoor-outdoor" />
+  Outdoor</label
+><br />
+<label for="loving"
+  ><input id="loving" value="loving" type="checkbox" name="personality" />
+  Loving</label
+>
+<label for="lazy"
+  ><input id="lazy" value="lazy" type="checkbox" name="personality" />
+  Lazy</label
+>
+<label for="energetic"
+  ><input id="energetic" value="energetic" type="checkbox" name="personality" />
+  Energetic</label
+>
+```
 
+### Check Radio Buttons and Checkboxes by Default
+
+Set the first of your radio buttons and the first of your checkboxes to both be checked by default.
+
+```html
+<label for="indoor"
+  ><input
+    id="indoor"
+    type="radio"
+    name="indoor-outdoor"
+    value="indoor"
+    checked
+  />
+  Indoor</label
+>
+<label for="outdoor"
+  ><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor" />
+  Outdoor</label
+><br />
+<label for="loving"
+  ><input
+    id="loving"
+    type="checkbox"
+    name="personality"
+    value="loving"
+    checked
+  />
+  Loving</label
+>
+<label for="lazy"
+  ><input id="lazy" type="checkbox" name="personality" value="lazy" />
+  Lazy</label
+>
+<label for="energetic"
+  ><input id="energetic" type="checkbox" name="personality" value="energetic" />
+  Energetic</label
+><br />
+```
+
+### Nest Many Elements within a Single div Element
+
+Nest your "Things cats love" and "Top 3 things cats hate" lists all within a single `div` element.
+
+Hint: Try putting your opening `div` tag above your "Things cats love" `p` element and your closing `div` tag after your closing `ol` tag so that both of your lists are within one `div`.
+
+```html
+<div>
+  <p>Things cats love:</p>
+  <ul>
+    <li>cat nip</li>
+    <li>laser pointers</li>
+    <li>lasagna</li>
+  </ul>
+  <p>Top 3 things cats hate:</p>
+  <ol>
+    <li>flea treatment</li>
+    <li>thunder</li>
+    <li>other cats</li>
+  </ol>
+</div>
 ```
