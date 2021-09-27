@@ -386,3 +386,22 @@ Give your `h1` element the class of `pink-text`.
 </style>
 <h1 class="pink-text">Hello World!</h1>
 ```
+
+### Override Styles in Subsequent CSS
+
+Create an additional CSS class called `blue-text` that gives an element the color blue. Make sure it's below your `pink-text` class declaration.
+
+Apply the `blue-text` class to your `h1` element in addition to your `pink-text` class, and let's see which one wins.
+
+
+```html
+<style>
+.pink-text {
+    color: pink;
+  }
+  .blue-text {
+    color: blue;
+  }
+</style>
+<h1 class="pink-text blue-text">Hello World!</h1>
+```
