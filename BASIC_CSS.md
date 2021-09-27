@@ -312,3 +312,77 @@ Use Clockwise Notation to give the element with the `blue-box` class a margin of
   color: #fff;
 }
 ```
+
+### Use Attribute Selectors to Style Elements
+
+Using the `type` attribute selector, try to give the checkboxes in CatPhotoApp a top margin of 10px and a bottom margin of 15px.
+
+```css
+[type="checkbox"] {
+  margin: 10px 0 15px;
+}
+```
+
+### Understand Absolute versus Relative Units
+
+Add a `padding` property to the element with class `red-box` and set it to `1.5em`.
+
+```css
+.red-box {
+  background-color: red;
+  padding: 1.5em;
+  margin: 20px 40px 20px 40px;
+}
+```
+
+### Style the HTML Body Element
+
+Give the body a `background-color` of `black`.
+
+```html
+<style>
+  body {
+    background-color: black;
+  }
+</style>
+```
+
+### Inherit Styles from the Body Element
+
+First, create a `h1` element with the text `Hello World`
+
+Then, let's give all elements on your page the color of `green` by adding `color: green;` to your `body` element's style declaration.
+
+Finally, give your `body` element the `font-family` of monospace by adding `font-family: monospace;` to your `body` element's style declaration.
+
+```html
+<style>
+  body {
+    background-color: black;
+    color: green;
+    font-family: monospace;
+  }
+</style>
+
+<h1>Hello World</h1>
+```
+
+### Prioritize One Style Over Another
+
+Create a CSS class called `pink-text` that gives an element the color pink.
+
+Give your `h1` element the class of `pink-text`.
+
+```html
+<style>
+  body {
+    background-color: black;
+    font-family: monospace;
+    color: green;
+  }
+  .pink-text {
+    color: pink;
+  }
+</style>
+<h1 class="pink-text">Hello World!</h1>
+```
