@@ -452,3 +452,255 @@ Replace the word `black` in our `body` element's background-color with its hex c
 
 ### Use Hex Code to Mix Colors
 
+Replace the color words in our `style` element with their correct hex codes.
+
+```html
+<style>
+  .red-text {
+    color: #ff0000;
+  }
+  .green-text {
+    color: #00ff00;
+  }
+  .dodger-blue-text {
+    color: #1e90ff;
+  }
+  .orange-text {
+    color: #ffa500;
+  }
+</style>
+```
+
+### Use Abbreviated Hex Code
+
+Use the abbreviated hex codes to color the correct elements.
+
+```html
+<style>
+  .red-text {
+    color: #f00;
+  }
+  .fuchsia-text {
+    color: #f0f;
+  }
+  .cyan-text {
+    color: #0ff;
+  }
+  .green-text {
+    color: #0f0;
+  }
+</style>
+```
+
+### Use RGB values to Color Elements
+
+Let's replace the hex code in our `body` element's background color with the RGB value for black: `rgb(0, 0, 0)`
+
+```html
+<style>
+  body {
+    background-color: rgb(0, 0, 0);
+  }
+</style>
+```
+
+### Use RGB to Mix Colors
+
+Replace the hex codes in our `style` element with their correct RGB values.
+
+```html
+<style>
+  .red-text {
+    color: rgb(255, 0, 0);
+  }
+  .orchid-text {
+    color: rgb(218, 112, 214);
+  }
+  .sienna-text {
+    color: rgb(160, 82, 45);
+  }
+  .blue-text {
+    color: rgb(0, 0, 255);
+  }
+</style>
+```
+
+### Use CSS Variables to change several elements at once
+
+In the `penguin` class, change the `black` value to `gray`, the `gray` value to `white`, and the `yellow` value to `orange`.
+
+```html
+<style>
+  .penguin {
+    --penguin-skin: gray;
+    --penguin-belly: white;
+    --penguin-beak: orange;
+  }
+</style>
+```
+
+### Create a custom CSS Variable
+
+In the `penguin` class, create a variable name `--penguin-skin` and give it a value of `gray`.
+
+```html
+<style>
+  .penguin {
+    --penguin-skin: gray;
+  }
+</style>
+```
+
+### Use a custom CSS Variable
+
+Apply the `--penguin-skin` variable to the `background` property of the `penguin-top`, `penguin-bottom`, `right-hand` and `left-hand` classes.
+
+```html
+<style>
+  .penguin {
+    --penguin-skin: gray;
+    position: relative;
+    margin: auto;
+    display: block;
+    margin-top: 5%;
+    width: 300px;
+    height: 300px;
+  }
+
+  .penguin-top {
+    top: 10%;
+    left: 25%;
+
+    /* Change code below this line */
+    background: var(--penguin-skin);
+    /* Change code above this line */
+
+    width: 50%;
+    height: 45%;
+    border-radius: 70% 70% 60% 60%;
+  }
+</style>
+```
+
+### Attach a Fallback value to a CSS Variable
+
+It looks like there is a problem with the variables supplied to the `.penguin-top` and `.penguin-bottom` classes. Rather than fix the typo, add a fallback value of `black` to the `background` property of the `.penguin-top` and `.penguin-bottom` classes.
+
+```html
+<style>
+  .penguin {
+    --penguin-skin: gray;
+    position: relative;
+    margin: auto;
+    display: block;
+    margin-top: 5%;
+    width: 300px;
+    height: 300px;
+  }
+
+  .penguin-top {
+    top: 10%;
+    left: 25%;
+
+    /* Change code below this line */
+    background: var(--penguin-skin, black);
+    /* Change code above this line */
+
+    width: 50%;
+    height: 45%;
+    border-radius: 70% 70% 60% 60%;
+  }
+</style>
+```
+
+### Improve Compatibility with Browser Fallbacks
+
+It looks like a variable is being used to set the background color of the `.red-box` class. Let's improve our browser compatibility by adding another `background` declaration right before the existing declaration and set its value to `red`.
+
+```html
+<style>
+  :root {
+    --red-color: red;
+  }
+  .red-box {
+    background: red;
+    background: var(--red-color);
+    height: 200px;
+    width: 200px;
+  }
+</style>
+<div class="red-box"></div>
+```
+
+### Inherit CSS Variables
+
+Define a variable named `--penguin-belly` in the `:root` selector and give it the value of `pink`. You can then see that the variable is inherited and that all the child elements which use it get pink backgrounds.
+
+```html
+<style>
+  :root {
+    /* Only change code below this line */
+    --penguin-belly: pink;
+    /* Only change code above this line */
+  }
+
+  body {
+    background: var(--penguin-belly, #c6faf1);
+  }
+</style>
+```
+
+### Change a variable for a specific area
+
+Change the value of `--penguin-belly` to `white` in the `penguin` class.
+
+```html
+<style>
+  :root {
+    --penguin-skin: gray;
+    --penguin-belly: pink;
+    --penguin-beak: orange;
+  }
+
+  body {
+    background: var(--penguin-belly, #c6faf1);
+  }
+
+  .penguin {
+    /* Only change code below this line */
+    --penguin-belly: white;
+    /* Only change code above this line */
+    position: relative;
+    margin: auto;
+    display: block;
+    margin-top: 5%;
+    width: 300px;
+    height: 300px;
+  }
+</style>
+```
+
+### Use a media query to change a variable
+
+In the `:root` selector of the `media query`, change it so `--penguin-size` is redefined and given a value of `200px`. Also, redefine `--penguin-skin` and give it a value of `black`. Then resize the preview to see this change in action.
+
+```html
+<style>
+  :root {
+    --penguin-size: 300px;
+    --penguin-skin: gray;
+    --penguin-belly: white;
+    --penguin-beak: orange;
+  }
+
+  @media (max-width: 350px) {
+    :root {
+      /* Only change code below this line */
+    --penguin-size: 200px;
+    --penguin-skin: black;
+      /* Only change code above this line */
+    }
+  }
+</style>
+```
+
