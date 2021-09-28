@@ -123,7 +123,175 @@ The element now has an id of `thumbnail`. With this selector, use the example CS
 
 ```css
 #thumbnail {
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-
-  }
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
 ```
+
+### Decrease the Opacity of an Element
+
+Set the `opacity` of the anchor tags to 0.7 using `links` class to select them
+
+```css
+.links {
+  text-align: left;
+  color: black;
+  opacity: 0.7;
+}
+```
+
+### Use the text-transform Property to Make Text Uppercase
+
+Transform the text of the `h4` to be uppercase using the `text-transform` property.
+
+```css
+h4 {
+  text-align: center;
+  background-color: rgba(45, 45, 45, 0.1);
+  padding: 10px;
+  font-size: 27px;
+  text-transform: uppercase;
+}
+```
+
+### Set the font-size for Multiple Heading Elements
+
+In the `style` tags, set the `font-size` of the:
+
+`h1` tag to 68px.
+`h2` tag to 52px.
+`h3` tag to 40px.
+`h4` tag to 32px.
+`h5` tag to 21px.
+`h6` tag to 14px.
+
+```html
+<style>
+  h1 {
+    font-size: 68px;
+  }
+  h2 {
+    font-size: 52px;
+  }
+  h3 {
+    font-size: 40px;
+  }
+  h4 {
+    font-size: 32px;
+  }
+  h5 {
+    font-size: 21px;
+  }
+  h6 {
+    font-size: 14px;
+  }
+</style>
+```
+
+### Set the font-weight for Multiple Heading Elements
+
+Set the `font-weight` of the `h1` tag to 800.
+Set the `font-weight` of the `h2` tag to 600.
+Set the `font-weight` of the `h3` tag to 500.
+Set the `font-weight` of the `h4` tag to 400.
+Set the `font-weight` of the `h5` tag to 300.
+Set the `font-weight` of the `h6` tag to 200.
+
+```html
+<style>
+  h1 {
+    font-size: 68px;
+    font-weight: 800;
+  }
+  h2 {
+    font-size: 52px;
+    font-weight: 600;
+  }
+  h3 {
+    font-size: 40px;
+    font-weight: 500;
+  }
+  h4 {
+    font-size: 32px;
+    font-weight: 400;
+  }
+  h5 {
+    font-size: 21px;
+    font-weight: 300;
+  }
+  h6 {
+    font-size: 14px;
+    font-weight: 200;
+  }
+</style>
+```
+
+### Set the font-size of Paragraph Text
+
+Change the value of the `font-size` property for the paragraph to 16px to make it more visible.
+
+```html
+<style>
+  p {
+    font-size: 16px;
+  }
+</style>
+```
+
+### Set the line-height of Paragraphs
+
+Add a `line-height` property to the `p` tag and set it to 25px.
+
+```html
+<style>
+  p {
+    font-size: 16px;
+    line-height: 25px;
+  }
+</style>
+```
+
+### Adjust the Hover State of an Anchor Tag
+
+The code editor has a CSS rule to style all `a` tags black. Add a rule so that when the user hovers over the `a` tag, the `color` is blue.
+
+```html
+<style>
+  a {
+    color: #000;
+  }
+  a:hover {
+    color: blue;
+  }
+</style>
+```
+
+### Change an Element's Relative Position
+
+Change the `position` of the `h2` to `relative`, and use a CSS offset to move it 15 pixels away from the `top` of where it sits in the normal flow. Notice there is no impact on the positions of the surrounding h1 and p elements.
+
+```html
+<style>
+  h2 {
+    position: relative;
+    top: 15px;
+  }
+</style>
+```
+
+### Move a Relatively Positioned Element with CSS Offsets
+
+Use CSS offsets to move the `h2` 15 pixels to the right and 10 pixels up.
+
+```html
+<style>
+  h2 {
+    position: relative;
+    left: 15px;
+    bottom: 10px;
+  }
+</style>
+```
+
+### Lock an Element to its Parent with Absolute Positioning
+
+Lock the `#searchbar` element to the top-right of its `section` parent by declaring its `position` as `absolute`. Give it `top` and `right` offsets of 50 pixels each.
