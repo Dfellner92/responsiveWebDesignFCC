@@ -393,10 +393,9 @@ Create an additional CSS class called `blue-text` that gives an element the colo
 
 Apply the `blue-text` class to your `h1` element in addition to your `pink-text` class, and let's see which one wins.
 
-
 ```html
 <style>
-.pink-text {
+  .pink-text {
     color: pink;
   }
   .blue-text {
@@ -405,3 +404,51 @@ Apply the `blue-text` class to your `h1` element in addition to your `pink-text`
 </style>
 <h1 class="pink-text blue-text">Hello World!</h1>
 ```
+
+### Override Class Declarations by Styling ID Attributes
+
+Give your `h1` element the `id` attribute of `orange-text`.
+
+```html
+<style>
+  #orange-text {
+    color: orange;
+  }
+</style>
+<h1 id="orange-text" class="pink-text blue-text">Hello World!</h1>
+```
+
+### Override Class Declarations with Inline Styles
+
+Use an inline style to try to make our `h1` element white.
+
+```html
+<h1 style="color: white;" id="orange-text" class="pink-text blue-text">
+  Hello World!
+</h1>
+```
+
+### Override All Other Styles by using Important
+
+Let's add the keyword `!important` to your pink-text element's color declaration to make 100% sure that your `h1` element will be pink.
+
+```css
+.pink-text {
+  color: pink !important;
+}
+```
+
+### Use Hex Code for Specific Colors
+
+Replace the word `black` in our `body` element's background-color with its hex code representation, `#000000`.
+
+```html
+<style>
+  body {
+    background-color: #000000;
+  }
+</style>
+```
+
+### Use Hex Code to Mix Colors
+
