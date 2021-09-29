@@ -388,3 +388,181 @@ Change the `background-color` property of the `blue` and `yellow` classes to the
 ```
 
 ### Learn Tertiary Colors
+
+Change the `background-color` property of the `orange`, `cyan`, and `raspberry` classes to their respective colors. Make sure to use the hex codes and not the color names.
+
+```css
+.orange {
+  background-color: #ff7f00;
+}
+
+.cyan {
+  background-color: #00ffff;
+}
+
+.raspberry {
+  background-color: #ff007f;
+}
+```
+
+### Adjust the Color of Various Elements to Complementary Colors
+
+This page will use a shade of teal (`#09A7A1`) as the dominant color, and its orange (`#FF790E`) complement to visually highlight the sign-up buttons. Change the `background-color` of both the `header` and `footer` from black to the teal color. Then change the `h2` text `color` to teal as well. Finally, change the `background-color` of the `button` to the orange color.
+
+```html
+<style>
+  body {
+    background-color: white;
+  }
+  header {
+    background-color: #09a7a1;
+    color: white;
+    padding: 0.25em;
+  }
+  h2 {
+    color: #09a7a1;
+  }
+  button {
+    background-color: FF790E;
+  }
+  footer {
+    background-color: #09a7a1;
+    color: white;
+    padding: 0.5em;
+  }
+</style>
+```
+
+### Adjust the Hue of a Color
+
+Change the `background-color` of each `div` element based on the class names (`green`, `cyan`, or `blue`) using `hsl()`. All three should have full saturation and normal lightness.
+
+```css
+.green {
+  background-color: hsl(120, 100%, 50%);
+}
+
+.cyan {
+  background-color: hsl(180, 100%, 50%);
+}
+
+.blue {
+  background-color: hsl(240, 100%, 50%);
+}
+```
+
+### Adjust the Tone of a Color
+
+All elements have a default `background-color` of `transparent`. Our `nav` element currently appears to have a `cyan` background, because the element behind it has a `background-color` set to `cyan`. Add a `background-color` to the `nav` element so it uses the same `cyan` hue, but has `80%` saturation and `25%` lightness values to change its tone and shade.
+
+```css
+header {
+  background-color: hsl(180, 90%, 35%);
+  color: #ffffff;
+}
+
+nav {
+  background-color: hsl(180, 80%, 25%);
+}
+```
+
+### Create a Gradual CSS Linear Gradient
+
+Use a `linear-gradient()` for the `div` element's `background`, and set it from a direction of 35 degrees to change the color from `#CCFFFF` to `#FFCCCC`.
+
+```html
+<style>
+  div {
+    border-radius: 20px;
+    width: 70%;
+    height: 400px;
+    margin: 50px auto;
+    background: linear-gradient(35deg, #ccffff, #ffcccc);
+  }
+</style>
+```
+
+### Use a CSS Linear Gradient to Create a Striped Element
+
+Make stripes by changing the `repeating-linear-gradient()` to use a gradient angle of `45deg`, then set the first two color stops to `yellow`, and finally the second two color stops to `black`.
+
+```html
+<style>
+  div {
+    border-radius: 20px;
+    width: 70%;
+    height: 400px;
+    margin: 50 auto;
+    background: repeating-linear-gradient(
+      45deg,
+      yellow 0px,
+      yellow 40px,
+      black 40px,
+      black 80px
+    );
+  }
+</style>
+
+<div></div>
+```
+
+### Create Texture by Adding a Subtle Pattern as a Background Image
+
+Using the url of `https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png`, set the `background` of the whole page with the `body` selector.
+
+```html
+<style>
+  body {
+    background: url(https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png);
+  }
+</style>
+```
+
+### Use the CSS Transform scale
+
+Increase the size of the element with the id of `ball2` to 1.5 times its original size.
+
+```html
+<style>
+  .ball {
+    width: 40px;
+    height: 40px;
+    margin: 50 auto;
+    position: fixed;
+    background: linear-gradient(35deg, #ccffff, #ffcccc);
+    border-radius: 50%;
+  }
+  #ball1 {
+    left: 20%;
+  }
+  #ball2 {
+    left: 65%;
+    transform: scale(1.5);
+  }
+</style>
+
+<div class="ball" id="ball1"></div>
+<div class="ball" id="ball2"></div>
+```
+
+### Use the CSS Transform scale Property to Scale an Element on Hover
+
+Add a CSS rule for the hover state of the `div` and use the `transform` property to scale the `div` element to 1.1 times its original size when a user hovers over it.
+
+```html
+<style>
+  div {
+    width: 70%;
+    height: 100px;
+    margin: 50px auto;
+    background: linear-gradient(53deg, #ccfffc, #ffcccf);
+  }
+  div:hover {
+    transform: scale(1.1);
+  }
+</style>
+
+<div></div>
+```
+
+###
