@@ -699,8 +699,7 @@ Create an animation for the element with the id `rect`, by setting the `animatio
 
   #rect {
     animation-name: rainbow;
-  animation-duration: 4s;
-
+    animation-duration: 4s;
   }
 
   @keyframes rainbow {
@@ -708,18 +707,346 @@ Create an animation for the element with the id `rect`, by setting the `animatio
       background-color: blue;
     }
     50% {
-     background-color: green; 
+      background-color: green;
     }
     100% {
       background-color: yellow;
     }
   }
-
-
-
-
 </style>
 <div id="rect"></div>
 ```
 
-###
+### Use CSS Animation to Change the Hover State of a Button
+
+Note that `ms` stands for milliseconds, where 1000ms is equal to 1s.
+
+Use CSS `@keyframes` to change the `background-color` of the `button` element so it becomes `#4791d0` when a user hovers over it. The `@keyframes` rule should only have an entry for `100%`.
+
+```html
+<style>
+  button {
+    border-radius: 5px;
+    color: white;
+    background-color: #0f5897;
+    padding: 5px 10px 8px 10px;
+  }
+
+  button:hover {
+    animation-name: background-color;
+    animation-duration: 500ms;
+  }
+
+  @keyframes background-color {
+    100% {
+      background-color: #4791d0;
+    }
+  }
+</style>
+
+<button>Register</button>
+```
+
+### Modify Fill Mode of an Animation
+
+Set the `animation-fill-mode` property of `button:hover` to `forwards` so the button stays highlighted when a user hovers over it.
+
+```html
+<style>
+  button {
+    border-radius: 5px;
+    color: white;
+    background-color: #0f5897;
+    padding: 5px 10px 8px 10px;
+  }
+  button:hover {
+    animation-name: background-color;
+    animation-duration: 500ms;
+    /* Only change code below this line */
+    animation-fill-mode: forwards;
+    /* Only change code above this line */
+  }
+  @keyframes background-color {
+    100% {
+      background-color: #4791d0;
+    }
+  }
+</style>
+<button>Register</button>
+```
+
+### Create Movement Using CSS Animation
+
+Add a horizontal motion to the `div` animation. Using the `left` offset property, add to the `@keyframes` rule so rainbow starts at 0 pixels at `0%`, moves to 25 pixels at `50%`, and ends at -25 pixels at `100%`. Don't replace the `top` property in the editor - the animation should have both vertical and horizontal motion.
+
+```html
+<style>
+  div {
+    height: 40px;
+    width: 70%;
+    background: black;
+    margin: 50px auto;
+    border-radius: 5px;
+    position: relative;
+  }
+
+  #rect {
+    animation-name: rainbow;
+    animation-duration: 4s;
+  }
+
+  @keyframes rainbow {
+    0% {
+      background-color: blue;
+      top: 0px;
+      left: 0px;
+    }
+    50% {
+      background-color: green;
+      top: 50px;
+      left: 25px;
+    }
+    100% {
+      background-color: yellow;
+      top: 0px;
+      left: -25px;
+    }
+  }
+</style>
+
+<div id="rect"></div>
+```
+
+### Create Visual Direction by Fading an Element from Left to Right
+
+Target the element with the id of `ball` and add the `opacity` property set to 0.1 at `50%`, so the element fades as it moves to the right.
+
+```html
+<style>
+  #ball {
+    width: 70px;
+    height: 70px;
+    margin: 50px auto;
+    position: fixed;
+    left: 20%;
+    border-radius: 50%;
+    background: linear-gradient(35deg, #ccffff, #ffcccc);
+    animation-name: fade;
+    animation-duration: 3s;
+  }
+
+  @keyframes fade {
+    50% {
+      left: 60%;
+      opacity: 0.1;
+    }
+  }
+</style>
+
+<div id="ball"></div>
+```
+
+### Animate Elements Continually Using an Infinite Animation Count
+
+To keep the ball bouncing on the right on a continuous loop, change the `animation-iteration-count` property to `infinite`.
+
+```html
+<style>
+  #ball {
+    width: 100px;
+    height: 100px;
+    margin: 50px auto;
+    position: relative;
+    border-radius: 50%;
+    background: linear-gradient(35deg, #ccffff, #ffcccc);
+    animation-name: bounce;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes bounce {
+    0% {
+      top: 0px;
+    }
+    50% {
+      top: 249px;
+      width: 130px;
+      height: 70px;
+    }
+    100% {
+      top: 0px;
+    }
+  }
+</style>
+<div id="ball"></div>
+```
+
+### Make a CSS Heartbeat using an Infinite Animation Count
+
+Keep the heart beating by adding the `animation-iteration-count` property for both the `back` class and the `heart` class and setting the value to `infinite`. The `heart:before` and `heart:after` selectors do not need any animation properties.
+
+```html
+<style>
+  .back {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    animation-name: backdiv;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+
+  .heart {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: pink;
+    height: 50px;
+    width: 50px;
+    transform: rotate(-45deg);
+    animation-name: beat;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+  .heart:after {
+    background-color: pink;
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0px;
+    left: 25px;
+  }
+  .heart:before {
+    background-color: pink;
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: -25px;
+    left: 0px;
+  }
+
+  @keyframes backdiv {
+    50% {
+      background: #ffe6f2;
+    }
+  }
+
+  @keyframes beat {
+    0% {
+      transform: scale(1) rotate(-45deg);
+    }
+    50% {
+      transform: scale(0.6) rotate(-45deg);
+    }
+  }
+</style>
+<div class="back"></div>
+<div class="heart"></div>
+```
+
+### Animate Elements at Variable Rates
+
+Alter the animation rate for the element with the class name of `star-1` by changing its `@keyframes` rule to 50%.
+
+```css
+@keyframes twinkle-1 {
+  50% {
+    transform: scale(0.5);
+    opacity: 0.5;
+  }
+}
+```
+
+### Animate Multiple Elements at Variable Rates
+
+Set the `animation-duration` of the elements with the classes `star-1`, `star-2`, and `star-3` to 1s, 0.9s, and 1.1s, respectively.
+
+```css
+.star-1 {
+  margin-top: 15%;
+  margin-left: 60%;
+  animation-duration: 1s;
+  animation-name: twinkle;
+}
+
+.star-2 {
+  margin-top: 25%;
+  margin-left: 25%;
+  animation-duration: 0.9s;
+  animation-name: twinkle;
+}
+
+.star-3 {
+  margin-top: 10%;
+  margin-left: 50%;
+  animation-duration: 1.1s;
+  animation-name: twinkle;
+}
+```
+
+### Change Animation Timing with Keywords
+
+For the elements with id of `ball1` and `ball2`, add an `animation-timing-function` property to each, and set `#ball1` to `linear`, and `#ball2` to `ease-out`. Notice the difference between how the elements move during the animation but end together, since they share the same `animation-duration` of 2 seconds.
+
+```css
+#ball1 {
+  left: 27%;
+  animation-timing-function: linear;
+}
+#ball2 {
+  left: 56%;
+  animation-timing-function: ease-out;
+}
+```
+
+### Learn How Bezier Curves Work
+
+For the element with the id of `ball1`, change the value of the `animation-timing-function` property from `linear` to its equivalent `cubic-bezier` function value. Use the point values given in the example above.
+
+```css
+#ball1 {
+  left: 27%;
+  animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
+}
+```
+
+### Use a Bezier Curve to Move a Graphic
+
+To see the effect of this Bezier curve in action, change the `animation-timing-function` of the element with id of `red` to a `cubic-bezier` function with x1, y1, x2, y2 values set respectively to 0, 0, 0.58, 1. This will make both elements progress through the animation similarly.
+
+```css
+#red {
+  background: red;
+  left: 27%;
+  animation-timing-function: cubic-bezier(0, 0, 0.58, 1);
+}
+#blue {
+  background: blue;
+  left: 56%;
+  animation-timing-function: ease-out;
+}
+```
+
+### Make Motion More Natural Using a Bezier Curve
+
+Change value of the `animation-timing-function` of the element with the id of `green` to a `cubic-bezier` function with x1, y1, x2, y2 values set respectively to 0.311, 0.441, 0.444, 1.649.
+
+```css
+#green {
+  background: green;
+  left: 75%;
+  animation-timing-function: cubic-bezier(0.311, 0.441, 0.444, 1.649);
+}
+```
