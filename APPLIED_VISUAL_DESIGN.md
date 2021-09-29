@@ -295,3 +295,96 @@ Use CSS offsets to move the `h2` 15 pixels to the right and 10 pixels up.
 ### Lock an Element to its Parent with Absolute Positioning
 
 Lock the `#searchbar` element to the top-right of its `section` parent by declaring its `position` as `absolute`. Give it `top` and `right` offsets of 50 pixels each.
+
+```html
+<style>
+  #searchbar {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+  }
+  section {
+    position: relative;
+  }
+</style>
+```
+
+### Lock an Element to the Browser Window with Fixed Positioning
+
+The navigation bar in the code is labeled with an id of `navbar`. Change its `position` to `fixed`, and offset it 0 pixels from the `top` and 0 pixels from the `left`. After you have added the code, scroll the preview window to see how the navigation stays in place.
+
+```css
+#navbar {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+
+  width: 100%;
+  background-color: #767676;
+}
+```
+
+### Push Elements Left or Right with the float Property
+
+The given markup would work well as a two-column layout, with the `section` and `aside` elements next to each other. Give the `#left` item a `float` of `left` and the `#right` item a `float` of `right`.
+
+```css
+#left {
+  float: left;
+  width: 50%;
+}
+#right {
+  float: right;
+  width: 40%;
+}
+```
+
+### Change the Position of Overlapping Elements with the z-index Property
+
+Add a `z-index` property to the element with the class name of `first` (the red rectangle) and set it to a value of 2 so it covers the other element (blue rectangle).
+
+```css
+.first {
+  background-color: red;
+  position: absolute;
+  z-index: 2;
+}
+.second {
+  background-color: blue;
+  position: absolute;
+  left: 40px;
+  top: 50px;
+  z-index: 1;
+}
+```
+
+### Center an Element Horizontally Using the margin Property
+
+Center the `div` on the page by adding a `margin` property with a value of `auto`.
+
+```html
+<style>
+  div {
+    background-color: blue;
+    height: 100px;
+    width: 100px;
+    margin: auto;
+  }
+</style>
+<div></div>
+```
+
+### Learn about Complementary Colors
+
+Change the `background-color` property of the `blue` and `yellow` classes to their respective colors. Notice how the colors look different next to each other than they do compared against the white background.
+
+```css
+.blue {
+  background-color: #0000ff;
+}
+.yellow {
+  background-color: #ffff00;
+}
+```
+
+### Learn Tertiary Colors
