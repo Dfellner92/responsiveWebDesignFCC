@@ -236,4 +236,83 @@ Camper Cat created a really cool stacked bar chart for his training page, and pu
 </style>
 ```
 
-###
+### Improve Readability with High Contrast Text
+
+Camper Cat's choice of light gray text on a white background for his recent blog post has a 1.5:1 contrast ratio, making it hard to read. Change the `color` of the text from the current gray (`#D3D3D3`) to a darker gray (`#636363`) to improve the contrast ratio to 6:1.
+
+```html
+<style>
+  body {
+    color: #636363;
+    background-color: #fff;
+  }
+</style>
+```
+
+### Avoid Colorblindness Issues by Using Sufficient Contrast
+
+Camper Cat is experimenting with using color for his blog text and background, but his current combination of a greenish `background-color` with maroon text `color` has a 2.5:1 contrast ratio. You can easily adjust the lightness of the colors since he declared them using the CSS `hsl()` property (which stands for hue, saturation, lightness) by changing the third argument. Increase the `background-color` lightness value from 35% to 55%, and decrease the `color` lightness value from 20% to 15%. This improves the contrast to 5.9:1.
+
+```html
+<style>
+  body {
+    color: hsl(0, 55%, 15%);
+    background-color: hsl(120, 25%, 55%);
+  }
+</style>
+```
+
+### Avoid Colorblindness Issues by Carefully Choosing Colors that Convey Information
+
+Camper Cat is testing different styles for an important button, but the yellow (`#FFFF33`) `background-color` and the green (`#33FF33`) text color are neighboring hues on the color wheel and virtually indistinguishable for some colorblind users. (Their similar lightness also fails the contrast ratio check). Change the text `color` to a dark blue (`#003366`) to solve both problems.
+
+```html
+<style>
+  button {
+    color: #003366;
+    background-color: #ffff33;
+    font-size: 14px;
+    padding: 10px;
+  }
+</style>
+```
+
+### Give Links Meaning by Using Descriptive Link Text
+
+The link text that Camper Cat is using is not very descriptive without the surrounding context. Move the anchor (`a`) tags so they wrap around the text `information about batteries` instead of `Click here`.
+
+```html
+<p>
+  Felines the world over have been waging war on the most persistent of foes.
+  This red nemesis combines both cunning stealth and lightning speed. But chin
+  up, fellow fighters, our time for victory may soon be near. Click here for
+  <a href="">information about batteries</a>
+</p>
+```
+
+### Make Links Navigable with HTML Access Keys
+
+Camper Cat wants the links around the two blog article titles to have keyboard shortcuts so his site's users can quickly navigate to the full story. Add an `accesskey` attribute to both links and set the first one to `g` (for Garfield) and the second one to `c` (for Chuck Norris).
+
+```html
+<h2><a id="second" href="#" accesskey="c">Is Chuck Norris a Cat Person?</a></h2>
+```
+
+### Use tabindex to Add Keyboard Focus to an Element
+
+Camper Cat created a new survey to collect information about his users. He knows input fields automatically get keyboard focus, but he wants to make sure his keyboard users pause at the instructions while tabbing through the items. Add a `tabindex` attribute to the `p` tag and set its value to `0`. Bonus - using `tabindex` also enables the CSS pseudo-class `:focus` to work on the `p` tag.
+
+```html
+<p tabindex="0">
+  Instructions: Fill in ALL your information then click <b>Submit</b>
+</p>
+```
+
+### Use tabindex to Specify the Order of Keyboard Focus for Several Elements
+
+Camper Cat has a search field on his Inspirational Quotes page that he plans to position in the upper right corner with CSS. He wants the search `input` and submit `input` form controls to be the first two items in the tab order. Add a `tabindex` attribute set to `1` to the `search` `input`, and a `tabindex` attribute set to `2` to the `submit` `input`.
+
+```html
+<input tabindex="1" type="search" name="search" id="search" />
+<input tabindex="2" type="submit" name="submit" value="Submit" id="submit" />
+```
