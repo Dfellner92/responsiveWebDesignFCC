@@ -337,3 +337,124 @@ Use `repeat` to remove repetition from the `grid-template-columns` property.
 ```
 
 ### Limit Item Size Using the minmax Function
+
+Using the `minmax` function, replace the `1fr` in the `repeat` function with a column size that has the minimum width of `90px` and the maximum width of `1fr`, and resize the preview panel to see the effect.
+
+```css
+.container {
+  font-size: 40px;
+  min-height: 300px;
+  width: 100%;
+  background: LightGray;
+  display: grid;
+  /* Only change code below this line */
+
+  grid-template-columns: repeat(3, minmax(90px, 1fr));
+
+  /* Only change code above this line */
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+```
+
+### Create Flexible Layouts Using auto-fill
+
+In the first grid, use `auto-fill` with `repeat` to fill the grid with columns that have a minimum width of `60px` and maximum of `1fr`. Then resize the preview to see auto-fill in action.
+
+```css
+.container {
+  font-size: 40px;
+  min-height: 100px;
+  width: 100%;
+  background: LightGray;
+  display: grid;
+  /* Only change code below this line */
+
+  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+
+  /* Only change code above this line */
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+```
+
+### Create Flexible Layouts Using auto-fit
+
+In the second grid, use `auto-fit` with `repeat` to fill the grid with columns that have a minimum width of `60px` and maximum of `1fr`. Then resize the preview to see the difference.
+
+```css
+.container2 {
+  font-size: 40px;
+  min-height: 100px;
+  width: 100%;
+  background: Silver;
+  display: grid;
+  /* Only change code below this line */
+
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+
+  /* Only change code above this line */
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+```
+
+### Use Media Queries to Create Responsive Layouts
+
+When the viewport width is `400px` or more, make the header area occupy the top row completely and the footer area occupy the bottom row completely.
+
+```css
+.container {
+  font-size: 1.5em;
+  min-height: 300px;
+  width: 100%;
+  background: LightGray;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px auto 1fr auto;
+  grid-gap: 10px;
+  grid-template-areas:
+    "header"
+    "advert"
+    "content"
+    "footer";
+}
+
+@media (min-width: 300px) {
+  .container {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "advert header"
+      "advert content"
+      "advert footer";
+  }
+}
+
+@media (min-width: 400px) {
+  .container {
+    grid-template-areas:
+      /* Only change code below this line */
+      "header header"
+      "advert content"
+      "footer footer";
+    /* Only change code above this line */
+  }
+}
+```
+
+### Create Grids within Grids
+
+Turn the element with the `item3` class into a grid with two columns with a width of `auto` and `1fr` using `display` and `grid-template-columns`.
+
+```css
+.item3 {
+  background: PaleTurquoise;
+  grid-area: content;
+  /* Only change code below this line */
+  display: grid;
+  grid-template-columns: auto 1fr;
+
+  /* Only change code above this line */
+}
+```
