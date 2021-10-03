@@ -221,4 +221,119 @@ Align the item with the class `item3` vertically at the `end`.
 }
 ```
 
-###
+### Align All Items Horizontally using justify-items
+
+Use this property to center all our items horizontally.
+
+```css
+.container {
+  font-size: 40px;
+  min-height: 300px;
+  width: 100%;
+  background: LightGray;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  /* Only change code below this line */
+  justify-items: center;
+
+  /* Only change code above this line */
+}
+```
+
+### Align All Items Vertically using align-items
+
+Use it now to move all the items to the end of each cell.
+
+```css
+.container {
+  font-size: 40px;
+  min-height: 300px;
+  width: 100%;
+  background: LightGray;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  /* Only change code below this line */
+  align-items: end;
+
+  /* Only change code above this line */
+}
+```
+
+### Divide the Grid Into an Area Template
+
+Change the template so the `footer` area spans the entire bottom row. Defining the areas won't have any visual effect right now. Later, you will make an item use an area to see how it works.
+
+```css
+.container {
+    font-size: 40px;
+    min-height: 300px;
+    width: 100%;
+    background: LightGray;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    grid-template-areas:
+    /* Only change code below this line */
+      grid-template-areas:
+      "header header header"
+      "advert content content"
+      "footer footer footer";
+    /* Only change code above this line */
+  }
+```
+
+### Place Items in Grid Areas Using the grid-area Property
+
+Place an element with the `item5` class in the `footer` area using the `grid-area` property.
+
+```css
+.item5 {
+  background: PaleGreen;
+  /* Only change code below this line */
+  grid-area: footer;
+
+  /* Only change code above this line */
+}
+```
+
+### Use grid-area Without Creating an Areas Template
+
+Using the `grid-area` property, place the element with `item5` class between the third and fourth horizontal lines and between the first and fourth vertical lines.
+
+```css
+.item5 {
+  background: PaleGreen;
+  /* Only change code below this line */
+  grid-area: 3 / 1 / 4 / 4;
+
+  /* Only change code above this line */
+}
+```
+
+### Reduce Repetition Using the repeat Function
+
+Use `repeat` to remove repetition from the `grid-template-columns` property.
+
+```css
+.container {
+  font-size: 40px;
+  min-height: 300px;
+  width: 100%;
+  background: LightGray;
+  display: grid;
+  /* Only change code below this line */
+
+  grid-template-columns: repeat(3, 1fr);
+
+  /* Only change code above this line */
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+```
+
+### Limit Item Size Using the minmax Function
