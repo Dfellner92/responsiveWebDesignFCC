@@ -166,4 +166,59 @@ Use `grid-gap` to introduce a `10px` gap between the rows and `20px` gap between
 }
 ```
 
+### Use grid-column to Control Spacing
+
+Make the item with the class `item5` consume the last two columns of the grid.
+
+```css
+.item5 {
+  background: PaleGreen;
+  /* Only change code below this line */
+  grid-column: 2 / 4;
+
+  /* Only change code above this line */
+}
+```
+
+### Use grid-row to Control Spacing
+
+Make the element with the `item5` class consume the last two rows.
+
+```css
+.item5 {
+  background: PaleGreen;
+  grid-column: 2 / 4; /* Only change code below
+this line */
+  grid-row: 2 / 4; /* Only change code above this line */
+}
+```
+
+### Align an Item Horizontally using justify-self
+
+Use the `justify-self` property to center the item with the class `item2`.
+
+```css
+.item2 {
+  background: LightSalmon;
+  /* Only change code below this line */
+  justify-self: center;
+
+  /* Only change code above this line */
+}
+```
+
+### Align an Item Vertically using align-self
+
+Align the item with the class `item3` vertically at the `end`.
+
+```css
+.item3 {
+  background: PaleTurquoise;
+  /* Only change code below this line */
+  align-self: end;
+
+  /* Only change code above this line */
+}
+```
+
 ###
