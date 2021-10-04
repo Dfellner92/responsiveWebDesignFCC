@@ -17,6 +17,7 @@
 }
 
 #nav-link {
+  margin-top: 12px;
   margin-right: 20px;
   list-style-type: none;
   text-decoration: none;
@@ -26,6 +27,16 @@
   list-style-type: none;
   text-decoration: none;
   color: rgba(0, 0, 0, 1);
+}
+
+#video {
+  display: flex;
+  justify-content: center;
+}
+
+#form {
+  display: flex;
+  justify-content: center;
 }
 
 #section-2 {
@@ -40,7 +51,16 @@
   background-color: orange;
 }
 
+#title {
+}
+
 div {
   padding-top: 15vh;
   z-index: 2;
+}
+
+@media (max-width: 502px) {
+  #title {
+    display: none;
+  }
 }
