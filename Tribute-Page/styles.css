@@ -1,3 +1,26 @@
+#title {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 8vh;
+  background-color: #d3d3d3;
+  padding: 5px;
+}
+#img-div {
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  border: 2px solid black;
+}
 #img-pic {
-  height: 20vh;
+  height: 88%;
+  width: 45%;
+  display: flex;
+  margin: 0 auto;
+}
+#img-caption {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #ebecf0;
 }
