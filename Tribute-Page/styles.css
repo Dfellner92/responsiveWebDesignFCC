@@ -12,6 +12,7 @@
   height: 50vh;
   border: 2px solid black;
 }
+
 #img-pic {
   height: 88%;
   width: 45%;
@@ -23,4 +24,14 @@
   justify-content: center;
   flex-wrap: wrap;
   background-color: #ebecf0;
+}
+
+#tribute-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#tribute-link {
+  text-decoration: none;
 }
