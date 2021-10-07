@@ -9,35 +9,84 @@
   </head>
   <body>
     <main id="main-doc">
-      <section id="css_documentation" class="main-section">
-        <header>CSS Documentation</header>
-        <p>Box Model</p>
-        <p>Flex Box</p>
-        <p>CSS Grid</p>
-        <p>Media Queries</p>
-      </section>
-      <section id="box_model" class="main-section">
-        <header>Box Model</header>
-        <p>Overview</p>
-        <p>Different Parts</p>
-        <p>Height and Width</p>
-      </section>
-      <section id="flex_box" class="main-section">
-        <header>Flex Box</header>
-        <p>Flex Container</p>
-        <p>Flex Items</p>
-        <p>Flex Responsive</p>
-      </section>
-      <section id="css_grid" class="main-section">
-        <header>CSS Grid</header>
-        <p>Intro</p>
-        <p>Grid Container</p>
-        <p>Grid Items</p>
-      </section>
-      <section id="media_queries" class="main-section">
-        <header>Media Queries</header>
-        <p>Syntax</p>
-      </section>
-    </main>
+        <nav id="navbar">
+          <header id="nav-bar__header">CSS Documentation</header>
+          <div id="nav-bar__links">
+          <div class="separator"><br/></div>
+      
+            <a href="#box_model" class="nav-link">Box Model</a>
+            <div class="separator"><br/></div>
+            <a href="#flex_box" class="nav-link">Flex Box</a>
+                  <div class="separator"><br/></div>
+      
+            <a href="#css_grid" class="nav-link">CSS Grid</a>
+            <div class="separator"><br/></div>
+            <a href="#media_queries" class="nav-link">Media Queries</a>
+            <div class="separator"><br/></div>
+            <a href="#css_positions" class="nav-link">CSS Positions</a>
+          </div>
+        </nav>
+        <div id="sections">
+        <section id="css_documentation" >
+          <header>
+            CSS Documentation
+          </header>
+          <p>Box Model</p>
+          <p>Flex Box</p>
+          <p>CSS Grid</p>
+          <p></p>
+        </section>
+        <section id="box_model" class="main-section">       
+          <header>
+            Box Model
+          </header>
+          <p>Overview</p>
+          <p>Different Parts include:
+            <ul>
+              <li>Padding</li>
+              <li>Margin</li>
+              <li>Border</li>
+              <li>top/bottom</li>
+              <li>left/right</li>
+            <ul>
+          </p>
+          <br/>    
+          <p>Height and Width</p>
+        </section>
+        <section id="flex_box" class="main-section">
+          <header>
+            Flex Box
+          </header>
+          <p>Flex Container</p>
+          <p>Flex Items</p>
+          <p>Flex Responsive</p>
+        </section>
+        <section id="css_grid" class="main-section">
+          <header>
+            CSS Grid
+          </header>
+          <p>The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning.</p>
+          <p>To make an HTML element behave as a grid container, you have to set the <code>display</code> property to <code>grid</code> or <code>inline-grid</code>.
+      
+      Grid containers consist of grid items, placed inside columns and rows.</p>
+          <p>Grid Items</p>
+        </section>
+        <section id="media_queries" class="main-section">
+          <header>
+            Media Queries
+          </header>
+          <p>Syntax</p>
+        </section>
+        <section id="css_positions" class="main-section">
+          <header>
+            CSS Positions
+          </header>
+          <p>For an element with <code>position: relative</code>, setting the top, right, bottom, and left properties will cause it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element.</p>
+          <p>An element with <code>position: absolute;</code> is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed).</p>
+          <p>An element with <code>position: fixed;</code> is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element.
+      </p>
+        </section>  
+        </div>
+      </main>
   </body>
 </html>
