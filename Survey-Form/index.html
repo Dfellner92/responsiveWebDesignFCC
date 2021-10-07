@@ -1,101 +1,137 @@
 <!DOCTYPE html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Survey Form</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1 id="title">Health Survey</h1>
-  <p id="description">
-    This is a survey about to see how healthy you are. Below are some questions
-    about your diet and exercise habits.
-  </p>
-  <form id="survey-form">
-    <label for="name" class="bold-head">Name</label>
-    <br />
-    <input type="text" id="name-label" required />
-    <br />
-    <br />
-    <label for="email" class="bold-head">E-mail</label>
-    <br />
-    <input type="email" id="email-label" placeholder="email" required />
-    <br />
-    <br />
-    <label for="number" class="bold-head">Average Calorie Intake</label>
-    <br />
-    <input
-      type="number"
-      class="number"
-      id="number-label"
-      min="100"
-      max="10000"
-    />
-    <br />
-    <br />
-    <label for="cars" class="bold-head">Favorite Exercise</label>
-    <br />
-    <select id="exercises" class="dropdown" name="exercises">
-      <option value="running">Running</option>
-      <option value="weightlifting">Weightlifitng</option>
-      <option value="tennis">Tennis</option>
-      <option value="golf">Golf</option>
-    </select>
-    <br />
-    <br />
-    <label for="diet" class="bold-head"> Diet </label>
-    <br />
-    <label for="non-veg">
-      Non-Veg
-      <input id="non-veg" type="radio" name="diet-type" checked />
-    </label>
-    <label for="vegetarian">
-      Vegetarian
-      <input id="vegetarian" type="radio" name="diet-type" />
-    </label>
-    <br />
-    <br />
-    <label for="workout-days" class="bold-head"> Workout Days </label>
-    <br />
-    <label for="sunday">
-      <input id="sunday" type="checkbox" name="workout-days" />
-      Sunday
-    </label>
-    <label for="monday">
-      <input id="monday" type="checkbox" name="workout-days" />
-      Monday
-    </label>
-    <label for="tuesday">
-      <input id="tuesday" type="checkbox" name="workout-days" />
-      Tuesday
-    </label>
-    <label for="wednesday">
-      <input id="wednesday" type="checkbox" name="workout-days" />
-      Wednesday
-    </label>
-    <label for="thursday">
-      <input id="thursday" type="checkbox" name="workout-days" />
-      Thursday
-    </label>
-    <label for="friday">
-      <input id="friday" type="checkbox" name="workout-days" />
-      Friday
-    </label>
-    <label for="saturday">
-      <input id="saturday" type="checkbox" name="workout-days" />
-      Saturday
-    </label>
-    <br />
-    <br />
-    <textarea
-      name="comment"
-      form="usrform"
-      class="text-area"
-      placeholder="Any other diet or exercise information"
-    ></textarea>
-    <br />
-    <br />
-    <input id="submit" type="submit" value="Submit" />
-  </form>
+  <main id="main">
+    <h1 id="title">Health Survey</h1>
+    <p id="description">
+      This is a survey about to see how healthy you are. Below are some
+      questions about your diet and exercise habits.
+    </p>
+    <form id="survey-form">
+      <label id="name-label" for="name" class="bold-head">Name</label>
+      <br />
+      <input type="text" id="name" placeholder="john smith" required />
+      <br />
+      <br />
+      <label id="email-label" for="email" class="bold-head">E-mail</label>
+      <br />
+      <input type="email" id="email" placeholder="name@example.com" required />
+      <br />
+      <br />
+      <label id="number-label" for="number" class="bold-head"
+        >Average Calorie Intake</label
+      >
+      <br />
+      <input
+        type="number"
+        class="number"
+        id="number"
+        min="100"
+        max="10000"
+        placeholder="ave. calories per day"
+      />
+      <br />
+      <br />
+      <label for="cars" class="bold-head">Favorite Exercise</label>
+      <br />
+      <select id="dropdown" class="dropdown" name="exercises">
+        <option value="running">Running</option>
+        <option value="weightlifting">Weightlifitng</option>
+        <option value="tennis">Tennis</option>
+        <option value="golf">Golf</option>
+      </select>
+      <br />
+      <br />
+      <label for="diet" class="bold-head"> Diet </label>
+      <br />
+      <label for="non-veg">
+        Non-Veg
+        <input
+          id="non-veg"
+          type="radio"
+          name="diet-type"
+          value="non-veg"
+          checked
+        />
+      </label>
+      <label for="vegetarian">
+        Vegetarian
+        <input
+          id="vegetarian"
+          type="radio"
+          name="diet-type"
+          value="vegetarian"
+        />
+      </label>
+      <br />
+      <br />
+      <label for="workout-days" class="bold-head"> Workout Days </label>
+      <br />
+      <label for="sunday">
+        <input id="sunday" type="checkbox" name="workout-days" value="sunday" />
+        Sunday
+      </label>
+      <label for="monday">
+        <input id="monday" type="checkbox" name="workout-days" value="monday" />
+        Monday
+      </label>
+      <label for="tuesday">
+        <input
+          id="tuesday"
+          type="checkbox"
+          name="workout-days"
+          value="tuesday"
+        />
+        Tuesday
+      </label>
+      <label for="wednesday">
+        <input
+          id="wednesday"
+          type="checkbox"
+          name="workout-days"
+          value="wednesday"
+        />
+        Wednesday
+      </label>
+      <label for="thursday">
+        <input
+          id="thursday"
+          type="checkbox"
+          name="workout-days"
+          value="thursday"
+        />
+        Thursday
+      </label>
+      <label for="friday">
+        <input id="friday" type="checkbox" name="workout-days" value="friday" />
+        Friday
+      </label>
+      <label for="saturday">
+        <input
+          id="saturday"
+          type="checkbox"
+          name="workout-days"
+          value="saturday"
+        />
+        Saturday
+      </label>
+      <br />
+      <br />
+      <textarea
+        name="comment"
+        form="usrform"
+        class="text-area"
+        placeholder="Any other diet or exercise information"
+      ></textarea>
+      <br />
+      <br />
+      <input id="submit" type="submit" value="Submit" />
+    </form>
+  </main>
 </body>
